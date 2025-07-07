@@ -1,0 +1,140 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .hero {
+            background-color: #26496e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            margin: 0;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .service {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service h3 {
+            margin-top: 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>      
+    <header>
+        <h1>Rizzler Co.</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="update-cta">
+            <form id="ctaform">
+                <label for ="newHeadline">Update CTA Headline:</label>
+                <input type="text" id="newHeadline" name="newHeadline" placeholder="Enter new headline" required>
+                <button type="submit">Update</button>   
+            </form>
+        </section>
+
+        <section class="hero">
+            <h2>Welcome to Rizzler Co.</h2>
+            <p>Your satisfaction is our priority. We offer the best services in the industry.</p>
+        </section>
+
+        <section class="services">
+            <div class="service">
+                <h3>The Lite Rizz — Starter Confidence Kit</h3>
+                <p> Perfect for: New clients dipping their toes into personal style and social presence.
+ Includes:30-min virtual style & confidence consult.Basic wardrobe audit
+“Quick Rizz Tips”.</p>
+            </div>
+            <div class="service">
+                <h3>The Signature Rizz — Your Signature Style</h3>
+                <p> Perfect for: Professionals or creatives who want a polished, consistent personal brand.
+ Includes: 1-hour deep-dive virtual session (style goals, lifestyle, confidence blockers)
+Full digital wardrobe audit. Hairstyle & grooming guidance.</p>
+            </div>
+            <div class="service">
+                <h3>The Ultimate Rizz — Full Image Transformation</h3>
+                <p> Perfect for: Those ready to completely level up.
+ Includes: 1:1 VIP virtual or in-person consult (90 mins). Complete wardrobe makeover plan
+Body language coaching (charisma training, presence hacks). Ongoing style check-ins (2 follow-up calls within 60 days)</p>
+            </div>
+        </section> 
+        
+        
+    <footer>
+        Contact us at: <a href="mailto:info@rizzlerco.com">info@rizzlerCo.com</a> | Phone: (817) 523-0418
+    </footer>
+    
+    <script>
+    document.getElementById('ctaform').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        const newHeadline = document.getElementById('newHeadline').value;
+        document.querySelector('.hero h2').textContent = newHeadline;
+    });
+    </script>
+ </body>
+</html>
